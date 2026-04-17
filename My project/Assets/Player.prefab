@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3155831288119062035}
   - component: {fileID: 2849067372981853736}
   - component: {fileID: 3935496239707801292}
-  m_Layer: 0
+  - component: {fileID: 2868929234084720696}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,6 +168,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2868929234084720696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051182199411123473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0217256a4a1cf3c48a6302cd47ddffc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  max_speed: 5
+  acceleration: 1.5
+  friction: 0.75
+  gravity: 0.5
+  max_fall_speed: 9.8
+  mask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &9121789449635628680
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +200,7 @@ GameObject:
   - component: {fileID: 353798153574147032}
   - component: {fileID: 6122779884956166558}
   - component: {fileID: 5989777245032822835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
