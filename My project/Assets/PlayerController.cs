@@ -66,17 +66,23 @@ public class PlayerController : MonoBehaviour
             velocity.x = Mathf.MoveTowards(velocity.x, 0, friction);
         }
 
+        bool is_grounded = false;
         float ground_offset = 0f;
-        left_ground_check = Physics2D.Raycast(rb.position + new Vector2(-0.5f, 0), Vector2.down, 1, mask);
-        right_ground_check = Physics2D.Raycast(rb.position + new Vector2(0.5f, 0), Vector2.down, 1, mask);
+        if(velocity.y <0)
+        {
+            left_ground_check = Physics2D.Raycast(rb.position + new Vector2(-0.5f, 0), Vector2.down, 1, mask);
+            right_ground_check = Physics2D.Raycast(rb.position + new Vector2(0.5f, 0), Vector2.down, 1, mask);
+            is_grounded = (left_ground_check || right_ground_check);
+        }
 
-        if (left_ground_check || right_ground_check)
+        if (is_grounded)
         {
             velocity.y = 0;
             ground_offset = Mathf.Max(left_ground_check.distance, right_ground_check.distance) - 0.5f;
             if(jump_check)
             {
                 velocity.y = jump_force;
+                is_grounded = false;
             }
         }
         else
