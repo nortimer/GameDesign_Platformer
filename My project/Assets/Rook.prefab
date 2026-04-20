@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3935496239707801292}
   - component: {fileID: 2868929234084720696}
   m_Layer: 6
-  m_Name: Player
+  m_Name: Rook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.78205764, b: 0.3443396, a: 1}
+  m_Color: {r: 0.2924528, g: 0.24024804, b: 0.21658063, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3935496239707801292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 128
+  jump_force: 15
 --- !u!1 &9121789449635628680
 GameObject:
   m_ObjectHideFlags: 0
