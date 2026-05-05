@@ -14,7 +14,7 @@ TagManager:
   - Player
   - Walls
   - Goal
-  - 
+  - background
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: foreground
+    uniqueID: 2379908949
+    locked: 0
+  - name: background
+    uniqueID: 2568676893
     locked: 0
   m_RenderingLayers:
   - Default
